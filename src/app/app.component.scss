@@ -1,38 +1,105 @@
-button {
-    margin-right: 5px;
-  }
-  
-  .red {
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    color: white;
-  }
-  
-  .green {
-    height: 100px;
-    width: 100px;
-    background-color: green;
-    color: white;
-  }
-  
-  .blue {
-    height: 100px;
-    width: 100px;
-    background-color: blue;
-    color: white;
-  }
-  
-  .purple {
-    height: 100px;
-    width: 100px;
-    background-color: purple;
-    color: white;
-  }
-  
-  .black {
-    height: 100px;
-    width: 100px;
-    background-color: black;
-    color: white;
-  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 28px 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  color: black;
+}
+
+
+
+body{
+  background: cyan;
+  background-repeat: no-repeat, no-repeat;
+  overflow: hidden;
+  height: 100px;
+  display: grid;
+  position: relative;
+}
+
+
+.card {
+  background-color:  #fff;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 600px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: repeat(5,1fr);
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.5);
+}
+
+span{
+  font: size 20px;;
+}
+h1,h3{
+  font-weight: 700;
+  color: black;
+}
+h1 span{
+  font-size: 28px;
+}
+h2{
+  font-size: 25px;
+}
+
+.card__bg{
+  grid-row: 1/3;    
+  background-image: url(./bg-pattern-card.svg);
+  border-radius:15px 15px 0 0;
+}
+
+.card__img{
+  margin-top: -80px;
+  text-align: center;
+}
+
+.card__img img{
+  border: 8px solid white;
+  border-radius: 50%;
+}
+
+.card__pri{
+  grid-row: 4/5;
+  text-align: center;
+  position: relative;    
+}
+
+.card__sec{
+  grid-row: 5;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 8px solid hsl(0deg 0% 59% / 20%) 
+}
+
+.card__pri section *{
+  line-height:45px;
+}
+
+.card__sec section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__sec section *{
+  line-height: 32px;
+}
+
+
+
+.attribution {
+  font-size: 18px;
+  position:absolute; 
+  bottom: 0; 
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+  font-size: 18px;
+}
